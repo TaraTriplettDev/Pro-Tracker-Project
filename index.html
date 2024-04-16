@@ -31,14 +31,14 @@
 
       <div class="container2">
         <form action="" method="post">
-          <span>Your Project</span>
-          <input type="text" required placeholder="enter your project name" maxlength="50" name="name" class="box">
+          <span>Your Project:</span>
+          <input id="name" type="text" required placeholder="enter your project name" maxlength="50" name="name" class="box">
           <span>Reminder:</span>
-          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
+          <input id="reminder" type="date" required placeholder="Date" maxlength="20" name="reminder" class="box">
           <span>Due:</span>
-          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
+          <input id="due" type="date" required placeholder="Date" maxlength="20" name="due" class="box">
           <span>Category:</span>
-          <select name="categories" class="box" required>
+          <select id="category" name="category" class="box" required>
              <option value="" disabled selected>Select Category --</option>
              <option value="business">Business</option>
              <option value="school">School</option>
@@ -48,15 +48,15 @@
              <option value="project plan 2">Project Plan 2</option>
           </select>
           <span>Priority:</span>
-          <select name="Priority" class="box" required>
+          <select id="priority" name="Priority" class="box" required>
              <option value="" disabled selected>Select Priority --</option>
              <option value="low">Low</option>
              <option value="medium">Medium</option>
              <option value="high">High</option>
           </select>
           <span>Your Team:</span>
-          <input type="email" required placeholder="email address" maxlength="50" name="email" class="box">
-          <input type="submit" value="Add Project" class="btn" name="add">
+          <input id="your-team" type="email" required placeholder="email address" maxlength="50" name="email" class="box">
+          <input id="add-project" type="submit" value="Add Project" class="btn" name="add">
        </form>
        
       </div>
