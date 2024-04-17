@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet" rel="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="menu-bar" class="fas fa-bars"></div>
+              <a class="navbar-brand" href="homepage.html">Pro Tracker | Finish What You Start</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>  
+              <div class="navbar-collapse-collapse" id="navbarSupportedContent" style="margin: auto">
+        <ul class="navbar-nav justify-content-end">
+        <li class="nav-item" id="add"><a class="nav-link" href="newprojects.html">New</a></li>
+        <li class="nav-item" id="archived"><a class="nav-link" href="archivedprojects.html">Archive</a></li>
+        <li class="nav-item" id="deleted"><a class="nav-link" href="deletedprojects.html">Delete</a></li>
+        
+        <li class="nav-item" id="logout"><a class="nav-link" onclick="logOut()">Logout</a></li>
+            </ul>
+       </div>
+     </div>
+     </nav>
+    </header>
+    <main>
+    <div id="instructions">
+        <p> Keep track of your archived projects.  </p>
+    </div>
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+        
+        <table >
+            <table style="width:100%">
+                <tr>
+                  <th>Archived Projects</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Review Status</th>
+                </tr>
+                <tr>
+                  <td><input type="text" required placeholder="project name" maxlength="50" name="name" class="box"></input></td>
+                  <td><input type="date"></input></td><td><input type="date"></input></td>
+                  <td><input type="checkbox" name="review" value="Not Started">Not Started<br>
+                    <input type="checkbox" name="review" value="Working on it">Working on it<br>
+                    <input type="checkbox" name="review" value="Stuck">Stuck<br>
+                    <input type="checkbox" name="review" value="Done">Done<br></td>  
+                </tr>
+                <tr>
+                  <td><input type="text" required placeholder="Project Details" maxlength="200" name="name"  class="box"></input></td>
+                </tr>
+        </table>
+        <button id="Archive">Archive</button>
+        <button id="Delete">Delete</button>
+        </div>
+
+        <div class="container mt-5 col-6">
+          <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Chapter Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <button id="add_btn" class="btn btn-outline-success" type="button" id="button-addon2">Add</button>
+                </div>
+  <ul id="parentlist" class="list-group">
+          <li class="list-group-item d-flex justify-content-between">
+                  <h3 class="flex-grow-1">An item</h3> 
+                  <button class="btn btn-warning mx-2" onclick="editChapter(this)">Edit</button>
+                  <button class="btn btn-danger mx-2" onclick="removeChapter(this)">Remove</button>
+        </ul>
+  </div>
+  </div>
+
+  
+
+     </main>
+      <script href="index.js"></script>
+</body>
