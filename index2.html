@@ -31,15 +31,15 @@
         <p>Type your projects name, collaborators, category, due date, priority and description. Then click track project.  </p>
     </div>
 
-        <div class="container">
+        <div class="container mt 5 col6">
        <form>
-        <table class="input-group">  
+        <table class="input-group mb-3">  
           <tr>
             <!--Icon goes here -->
             <th></th>
             <th>Project</th>
             <th>
-              <input type="text" required placeholder="enter your projects name" maxlength="50" aria-label="name" aria-describedby="button-add" class="box"></input>
+              <input type="text" class="form-control" required placeholder="enter your projects name" maxlength="50" aria-label="name" aria-describedby="button-add" class="box"></input>
             </th>
           </tr>
           <tr>
@@ -107,21 +107,22 @@
         <br></br>
 
         <ul id="parentlist" class="list-group">
-        <button class="btn btn-add" id="button-add" onclick="trackproject(this)">Track Project</button>
-        <button class="btn btn-warning" onclick="editproject(this)">Edit</button>
-        <button class="btn btn danger" onclick="archiveproject(this)">Archive</button>
-        <button class="btn btn danger" onclick="deleteproject(this)">Delete</button>
-        <h3 class="flex-grow-1">Addproject</h3>
+        <button class="btn btn-add" id="add_btn" onclick="trackProject(this)">Add</button>
+        <button class="btn btn-warning" onclick="editProject(this)">Edit</button>
+        <button class="btn btn danger" onclick="archiveProject(this)">Archive</button>
+        <button class="btn btn danger" onclick="deleteProject(this)">Delete</button>
+        <h3 class="flex-grow-1">Project Details:</h3>
         <li class="list-group-item d-flex justify-content-between">
       
       </ul>  
       </form>
       </div>
+
       <script>
         let addBtn = document.getElementById('add_btn');
-        addBtn.addEventListener('click', addChapter);
+        addBtn.addEventListener('click', trackProject);
         let p = document.getElementById('parentlist');
-        function addChapter(e){
+        function trackProject(e){
                 if((p.children[0]).classList.contains('emptyMsg')){
                         p.children[0].remove();
                 }
@@ -132,8 +133,9 @@
               let newli=document.createElement('li');
               newli.className = "list-group-item d-flex justify-content-between";
               newli.innerHTML=` <h3 class="flex-grow-1">${currentInput.value}</h3> 
-              <button class="btn btn-warning mx-2" onclick="editChapter(this)">Edit</button>
-              <button class="btn btn-danger mx-2" onclick="removeChapter(this)">Remove</button></li>`
+              <button class="btn btn-warning mx-2" onclick="editProject(this)">Edit</button>
+              <button class="btn btn-warning mx-2" onclick="archiveProject(this)">Archive</button>
+              <button class="btn btn-danger mx-2" onclick="deleteProject(this)">Delete</button></li>`
 
 
               
@@ -142,37 +144,37 @@
 
         }
 
-        function removeChapter(celement){
+        function deleteChapter(celement){
                let par = celement.parentElement
-               par.remove();
+               par.delete();
                if(p.children.length <=0){
                 let emptymsg = document.createElement("h3")
                 emptymsg.classList.add("emptyMsg")
                 // emptymsg.classList="d-flex justify-content-center"
-                emptymsg.textContent = "please add content"
+                emptymsg.textContent = "please add project content"
                 p.appendChild(emptymsg);
                }
         }
 
-        function editChapter(currElement){
+        function editProject(currElement){
                 if(currElement.textContent=="Done"){
                         currElement.textContent="Edit"
                         let prevsib = currElement.previousElementSibling;
-              let currChapterName = prevsib.value;
+              let currProjetName = prevsib.value;
               let currheading = document.createElement('h3');
                 currheading.className= "flex-grow-1"
-                currheading.textContent=currChapterName
+                currheading.textContent=currProjectName
 
                 currElement.parentElement.replaceChild(currheading, currElement.previousElementSibling)
                 }
                 else{
-                currElement.textContent="Done"
+                currElement.textContent="Archived"
               let prevsib = currElement.previousElementSibling;
-              let currChapterName = prevsib.textContent;
+              let currProjectName = prevsib.textContent;
               let currinput = document.createElement('input');
-              currinput.placeholder="chapter Name"
+              currinput.placeholder="Project Name"
               currinput.className="form-control"
-              currinput.value = currChapterName;
+              currinput.value = currProjectName;
 
               currElement.parentElement.replaceChild(currinput, currElement.previousElementSibling)
                 }
