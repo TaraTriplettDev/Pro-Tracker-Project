@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Tracker App</title>
+  <link rel="stylesheet"  href="styles.css">
+  <style>
+       .border{
+height:335px;
+      }
+      body{
+    background-color: violet;
+    }
+    
+     .container{
+        display: flex;
+       height:10px;
+       padding:30px;
+       box-sizing: border-box;
+       background-color:purple;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    
+.border{
+    border-style: solid;
+}
+
+.navbar-collapsecollapse{
+    .container{
+        display: flex;
+       height:10px;
+       padding:30px;
+       box-sizing: border-box;
+       background-color:purple;
+       flex-direction: row;
+       justify-content: space-around;
+}
+   
+
+   
+  </style>
+</head>
+<body>
+  <script src="./Assets/index.js"></script>
+ 
+  <header class="header">  <div class="container">
+        <header >Pro Tracker | Finish What You Start</header>
+       
+            <li class="new-item"><a href="nav link" href="#">About Us</a></li>
+            <li class="new-item"><a href="nav link" href="#">FAQs</a></li>
+            <li class="new-item"><a href="nav link" href="#">Contact</a></li>
+          </ul>
+         </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+      <div class="border"> 
+
+        <table>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Project</th>
+            <th>
+              <input type="text"></input>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Category</th>
+            <th>
+              <input type="text"></input>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Collaborators</th>
+            <th>
+              <input type="text"></input>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Start Date</th>
+            <th>
+              <input type="date"></input>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>End Date</th>
+            <th>
+              <input type="date"></input>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Priority</th>
+            <th>
+              <input type="radio" id="not-priority" name="priority-select"></input>
+              <label for="not-priority">Not Priority</label>
+              <input type="radio" id="priority" name="priority-select"></input>
+              <label for="priority">Priority</label>
+            </th>
+          </tr>
+          <tr>
+            <!--Icon goes here -->
+            <th></th>
+            <th>Description</th>
+            <th>
+              <input type="text"></input>
+            </th>
+          </tr>
+        </table>
+
+
+
+
+
+
+        <table>
+        <form action="" method="post">
+          <span>Your Project</span>
+          <input type="text" required placeholder="enter your project name" maxlength="50" name="name" class="box">
+          <span>Reminder:</span>
+          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
+          <span>Due:</span>
+          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
+          <span>Category:</span>
+          <select name="categories" class="box" required>
+             <option value="" disabled selected>Select Category --</option>
+             <option value="business">Business</option>
+             <option value="school">School</option>
+             <option value="shopping">Shopping</option>
+             <option value="travel">Travel</option>
+             <option value="project plan 1">Project Plan 1</option>
+             <option value="project plan 2">Project Plan 2</option>
+          </select>
+          <span>Priority:</span>
+          <select name="Priority" class="box" required>
+             <option value="" disabled selected>Select Priority --</option>
+             <option value="low">Low</option>
+             <option value="medium">Medium</option>
+             <option value="high">High</option>
+          </select>
+          <span>Your Team:</span>
+          <input type="email" required placeholder="email address" maxlength="50" name="email" class="box">
+
+
+          <!-- One of these input/button we should use! -->
+          <input type="submit" value="Add Project" class="btn" name="add">
+          <button onclick="alert('Project created.')">Create Project.</button>
+
+       </form>
+    </table>
+  </div>
+  </main>
+
+
+
+
+
+
+  <section class="aboutus" id="aboutus"  >
+    <h1 class="heading">About this app</h1>
+    <div class="about us">
+      <p>Capture ideas when inspiration strikes. Be proactive to finsh what you start. Bring your notes, to-dos, and collaborate on projects, both big and small to tame life’s distractions and accomplish more—at work, at home, and everywhere in between. Tackle your to-do list with ProTracker. Available on any device.</p>
+        <ul>
+          <li>Capture and organize tasks the moment they pop into your head. </li>
+          <li>Remember deadlines with reminders and due dates.</li>
+          <li>Collaborate on projects by assigning tasks to others.</li>
+          <li>Prioritize your tasks with priority levels.</li>
+        </ul>    
+    </div>  
+  </section>
+
+
+
+
+  <section class="facts" id="facts">
+    <h1 class="heading">FAQs</h1>
+    <div class="">
+  <h4>Future updates to include:</h4>
+  <ul><li> Track your progress with personalized productivity trends.</li>
+  <li>Integrate your tools like Gmail, Google Calendar, Slack, Amazon Alexa and more.</li></ul>
+    </div>  
+  </section>
+
+<section class="contact" id="contact">
+  <h1 class="heading">Contact Us</h1>
+
+  <p>Want to be apart of our mailing list?</p>
+  <input type="email" required placeholder="enter your email address" maxlength="50" name="email" class="box">
+  <button id="add_btn" class="btn outline" type="button">Email</button>
+ 
+  <div class="call">Questions? Feedback? Visit protracker.com/help or call 1-888-track</div> 
+
+</section class="container">
+
+<footer class="footer">
+  <section>
+  <div class="copyright"></div>  
+</section>
+</footer>
+</body>
+</html>
