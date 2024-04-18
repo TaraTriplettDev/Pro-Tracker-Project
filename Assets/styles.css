@@ -1,0 +1,29 @@
+body{
+    background-color: violet;
+    }
+    
+     .container{
+        display: flex;
+       height:10px;
+       padding:30px;
+       box-sizing: border-box;
+       background-color:purple;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    
+.border{
+    border-style: solid;
+}
+
+.navbar-collapsecollapse{
+    .container{
+        display: flex;
+       height:10px;
+       padding:30px;
+       box-sizing: border-box;
+       background-color:purple;
+       flex-direction: row;
+       justify-content: space-around;
+}
+   
