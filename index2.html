@@ -44,7 +44,17 @@ height:335px;
 </head>
 <body>
   <script src="./Assets/index.js"></script>
- 
+  <script>
+    function display(table){ 
+      table.o_Project.value = table.project.value; 
+      table.o_Category.value = table.category.value; 
+      table.o_Collaborators.value = table.collaborators.value; 
+      table.o_startDate.value = table.startDate.value; 
+      table.o_endDate.value = table.endDate.value; 
+      table.o_Priority.value = table.priority.value; 
+      table.o_description.value = table.description.value; 
+    }
+  </script>
   <header class="header">  <div class="container">
         <header >Pro Tracker | Finish What You Start</header>
        
@@ -57,10 +67,10 @@ height:335px;
     </nav>
   </header>
   <main>
-
-      <div class="border"> 
-
-        <table>
+        <form name="input" action="" method="get" onsubmit="return display(this)">
+          <section>
+            <div class="border"> 
+       <table>
           <tr>
             <!--Icon goes here -->
             <th></th>
@@ -74,7 +84,15 @@ height:335px;
             <th></th>
             <th>Category</th>
             <th>
-              <input type="text"></input>
+              <select name="categories" class="box" required>
+                <option value="" disabled selected>Select Category --</option>
+                <option value="business">Business</option>
+                <option value="school">School</option>
+                <option value="shopping">Shopping</option>
+                <option value="travel">Travel</option>
+                <option value="project plan 1">Project Plan 1</option>
+                <option value="project plan 2">Project Plan 2</option>
+             </select>
             </th>
           </tr>
           <tr>
@@ -120,55 +138,31 @@ height:335px;
               <input type="text"></input>
             </th>
           </tr>
+          <tr>
+            <td><output name="o_project" style="width:100px; height:20px"></output></td>
+            <td><output name="o_category" style="width:100px; height:20px"></output></td>
+            <td><output name="o_collaborators" style="width:100px; height:20px"></output></td>
+            <td><output name="o_start date" style="width:100px; height:20px"></output></td>
+            <td><output name="o_end date" style="width:100px; height:20px"></output></td>
+            <td><output name="o_priority" style="width:100px; height:20px"></output></td>
+            <td><output name="o_description" style="width:100px; height:20px"></output></td>
+          </tr>
         </table>
+        </div>
+      </section>
+     <section id="sec2" >
 
-
-
-
-
-
-        <table>
-        <form action="" method="post">
-          <span>Your Project</span>
-          <input type="text" required placeholder="enter your project name" maxlength="50" name="name" class="box">
-          <span>Reminder:</span>
-          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
-          <span>Due:</span>
-          <input type="date" required placeholder="Date" maxlength="20" name="name" class="box">
-          <span>Category:</span>
-          <select name="categories" class="box" required>
-             <option value="" disabled selected>Select Category --</option>
-             <option value="business">Business</option>
-             <option value="school">School</option>
-             <option value="shopping">Shopping</option>
-             <option value="travel">Travel</option>
-             <option value="project plan 1">Project Plan 1</option>
-             <option value="project plan 2">Project Plan 2</option>
-          </select>
-          <span>Priority:</span>
-          <select name="Priority" class="box" required>
-             <option value="" disabled selected>Select Priority --</option>
-             <option value="low">Low</option>
-             <option value="medium">Medium</option>
-             <option value="high">High</option>
-          </select>
-          <span>Your Team:</span>
-          <input type="email" required placeholder="email address" maxlength="50" name="email" class="box">
-
-
-          <!-- One of these input/button we should use! -->
-          <input type="submit" value="Add Project" class="btn" name="add">
-          <button onclick="alert('Project created.')">Create Project.</button>
-
+      <p>Project:</p><input type="text" name ="project"><br>
+      <p>Category:</p><input type="text" name ="category"><br>
+      <p>Collaborators:</p><input type="text" name ="collaborators"><br>
+      <p>Start Date:</p><input type="text" name ="start date"><br>
+      <p>End Date:</p><input type="text" name ="end date"><br>
+      <p>Priority:</p><input type="text" name ="priority"><br>
+      <p>Description:</p><input type="text" name ="description"><br>
+      <br>
+      <input type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
+         </section>
        </form>
-    </table>
-  </div>
-  </main>
-
-
-
-
-
 
   <section class="aboutus" id="aboutus"  >
     <h1 class="heading">About this app</h1>
@@ -179,13 +173,9 @@ height:335px;
           <li>Remember deadlines with reminders and due dates.</li>
           <li>Collaborate on projects by assigning tasks to others.</li>
           <li>Prioritize your tasks with priority levels.</li>
-        </ul>    
+        </ul>    az
     </div>  
   </section>
-
-
-
-
   <section class="facts" id="facts">
     <h1 class="heading">FAQs</h1>
     <div class="">
