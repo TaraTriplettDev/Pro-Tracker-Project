@@ -4,81 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pro Tracker App</title>
-  <link rel="stylesheet"  href="styles.css">
-  <style>
-       .border{
-height:335px;
-      }
-      body{
-    background-color: violet;
-    }
-    
-     .container{
-        display: flex;
-       height:10px;
-       padding:30px;
-       box-sizing: border-box;
-       background-color:purple;
-       flex-direction: row;
-       justify-content: space-around;
-    }
-    
-.border{
-    border-style: solid;
-}
-
-.navbar-collapsecollapse{
-    .container{
-        display: flex;
-       height:10px;
-       padding:30px;
-       box-sizing: border-box;
-       background-color:purple;
-       flex-direction: row;
-       justify-content: space-around;
-}
-   
-
-   
-  </style>
-</head>
+  <link rel="stylesheet"  href="Assets/styles.css">
+  </head>
 <body>
-  <script src="./Assets/index.js"></script>
-  <script>
-    function display(form){ 
-      let project = document.getElementById("project").value; 
-      let category = document.getElementById("category").value; 
-      let collaborators = getElementById ("collaborators").value; 
-      let startDate = getElementById("startDate").value; 
-      let endDate = getElementById("endDate").value; 
-      let priority = getElementById("priority").value; 
-      let description = getElementById("description").value; 
-    
-      let card = document.createElement("div")
-      card.classList.add("card")
-      card.inner.HTML = `
-   <h1>${project}</h1>
-   <h1>${category}</h1>
-   <h1>${collaborators}</h1>
-   <h1>${startDate}</h1>
-   <h1>${endDate}</h1>
-   <h1>${priority}</h1>
-   <h1>${description}</h1>
-<input id="submit" type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
-<button id="delete" onclick="alert('Project deleted')">Delete</button>`
-form.appenchild(card)
-let submit=document.createElement("submit");
-let delete=document.createElemnt("delete");
-
-submit.addEventListener("click", )
-delete.addEventListener("click",()=>{
-  
-})
-
-    }
-
-  </script>
-  <header class="header">  <div class="container">
+  <header>  
+    <div class="header">
         <header >Pro Tracker | Finish What You Start</header>
        
             <li class="new-item"><a href="nav link" href="#">About Us</a></li>
@@ -89,8 +19,10 @@ delete.addEventListener("click",()=>{
       </div>
     </nav>
   </header>
-  <main>
-        <form name="input" action="" method="get" onsubmit="return display(this)">
+  <body>
+    <div class="container">
+      <h1 type="text" id="projectDetails">Project Details</h1>
+        <form id="projectForm">
           <section>
             <div class="border"> 
        <table>
@@ -99,7 +31,7 @@ delete.addEventListener("click",()=>{
             <th></th>
             <th>Project</th>
             <th>
-              <input type="text" id="property"></input>
+              <input id="project" type="text" placeholder="project name"></input>
             </th>
           </tr>
           <tr>
@@ -123,7 +55,7 @@ delete.addEventListener("click",()=>{
             <th></th>
             <th>Collaborators</th>
             <th>
-              <input id="collaborators" type="text"></input>
+              <input id="collaborators" type="text" placeholder="team members"></input>
             </th>
           </tr>
           <tr>
@@ -161,24 +93,12 @@ delete.addEventListener("click",()=>{
               <input id="description" type="text"></input>
             </th>
           </tr>
-          <tr>
-            <td><output name="o_project" style="width:100px; height:20px"></output></td>
-            <td><output name="o_category" style="width:100px; height:20px"></output></td>
-            <td><output name="o_collaborators" style="width:100px; height:20px"></output></td>
-            <td><output name="o_start date" style="width:100px; height:20px"></output></td>
-            <td><output name="o_end date" style="width:100px; height:20px"></output></td>
-            <td><output name="o_priority" style="width:100px; height:20px"></output></td>
-            <td><output name="o_description" style="width:100px; height:20px"></output></td>
-          </tr>
         </table>
-        </div>
-      </section>
- 
-      <input id="submit" type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
-      <button id="delete" onclick="alert('Project deleted')">Delete</button>
-    
-    </section>
+        <button id="submit" type="submit" text="submit" onclick="alert('Project created')">Submit</button>
+      </div>
        </form>
+       <div id="projectDetails"></div>
+</div>
 
   <section class="aboutus" id="aboutus"  >
     <h1 class="heading">About this app</h1>
@@ -210,12 +130,13 @@ delete.addEventListener("click",()=>{
  
   <div class="call">Questions? Feedback? Visit protracker.com/help or call 1-888-track</div> 
 
-</section class="container">
+</section>
 
 <footer class="footer">
   <section>
   <div class="copyright"></div>  
 </section>
 </footer>
+<script src="./Assets/index.js"></script>
 </body>
 </html>

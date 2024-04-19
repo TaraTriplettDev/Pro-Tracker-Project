@@ -1,29 +1,56 @@
 body{
     background-color: violet;
+    
     }
     
-     .container{
-        display: flex;
-       height:10px;
-       padding:30px;
-       box-sizing: border-box;
-       background-color:purple;
-       flex-direction: row;
-       justify-content: space-around;
+.header{
+    display: flex;
+    height:10px;
+    padding:30px;
+    box-sizing: border-box;
+    background-color:purple;
+    flex-direction: row;
+    justify-content: space-around;
+
+    }
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
     }
     
 .border{
     border-style: solid;
+    height: auto;
 }
 
-.navbar-collapsecollapse{
-    .container{
-        display: flex;
-       height:10px;
-       padding:30px;
-       box-sizing: border-box;
-       background-color:purple;
-       flex-direction: row;
-       justify-content: space-around;
-}
-   
+  form input {
+    margin: auto;
+  }
+
+button {
+    text-align: left;
+    padding: 8px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: purple
+  }
+  
+  .card {
+    margin-top: auto;
+    padding: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .card button {
+    margin-top: auto;
+
+  }
+  
