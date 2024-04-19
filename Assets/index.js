@@ -6,27 +6,29 @@
 // };
 
 
-const name = document.getElementById("name")
-const reminder = document.getElementById("reminder")
-const due = document.getElementById("due")
+const project = document.getElementById("project")
 const category = document.getElementById("category")
+const collaborators = document.getElementById("collaborators")
+const startDate = document.getElementById("start-date")
+const endDate = document.getElementById("end-date")
 const priority = document.getElementById("priority")
-const team = document.getElementById("your-team")
-const addProject = document.getElementById("add-project")
+const description = document.getElementById("description")
 
 class Project {
-    constructor(name, reminder, due, category, priority){
-        this.name = name
-        this.reminder = reminder
-        this.due = due
+    constructor(project, category, collaborators, startDate, endDate, priority, description){
+        this.project = project
+        this.category = category
+        this.collaborators = collaborators
+        this.startDate = startDate
+        this.endDate = endDate
         this.category = category
         this.priority = priority
-        this.team = []
+        this.description = description
     }
 }
 
 const projectMaker = () => {
-    return new Project(`${name.value}, ${reminder.value}, ${due.value}, ${category.value}, ${priority.value}`)
+    return new Project(`${project.value}, ${category.value}, ${startDate.value}, ${EndDate.value} ${category.value}, ${priority.value} ${priority.value} ${description.value}`)
 }
 
 addProject.addEventListener("click", projectMaker())

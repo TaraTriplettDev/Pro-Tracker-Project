@@ -45,15 +45,38 @@ height:335px;
 <body>
   <script src="./Assets/index.js"></script>
   <script>
-    function display(table){ 
-      table.o_Project.value = table.project.value; 
-      table.o_Category.value = table.category.value; 
-      table.o_Collaborators.value = table.collaborators.value; 
-      table.o_startDate.value = table.startDate.value; 
-      table.o_endDate.value = table.endDate.value; 
-      table.o_Priority.value = table.priority.value; 
-      table.o_description.value = table.description.value; 
+    function display(form){ 
+      let project = document.getElementById("project").value; 
+      let category = document.getElementById("category").value; 
+      let collaborators = getElementById ("collaborators").value; 
+      let startDate = getElementById("startDate").value; 
+      let endDate = getElementById("endDate").value; 
+      let priority = getElementById("priority").value; 
+      let description = getElementById("description").value; 
+    
+      let card = document.createElement("div")
+      card.classList.add("card")
+      card.inner.HTML = `
+   <h1>${project}</h1>
+   <h1>${category}</h1>
+   <h1>${collaborators}</h1>
+   <h1>${startDate}</h1>
+   <h1>${endDate}</h1>
+   <h1>${priority}</h1>
+   <h1>${description}</h1>
+<input id="submit" type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
+<button id="delete" onclick="alert('Project deleted')">Delete</button>`
+form.appenchild(card)
+let submit=document.createElement("submit");
+let delete=document.createElemnt("delete");
+
+submit.addEventListener("click", )
+delete.addEventListener("click",()=>{
+  
+})
+
     }
+
   </script>
   <header class="header">  <div class="container">
         <header >Pro Tracker | Finish What You Start</header>
@@ -76,7 +99,7 @@ height:335px;
             <th></th>
             <th>Project</th>
             <th>
-              <input type="text"></input>
+              <input type="text" id="property"></input>
             </th>
           </tr>
           <tr>
@@ -84,7 +107,7 @@ height:335px;
             <th></th>
             <th>Category</th>
             <th>
-              <select name="categories" class="box" required>
+              <select id="category" name="categories" class="box" required>
                 <option value="" disabled selected>Select Category --</option>
                 <option value="business">Business</option>
                 <option value="school">School</option>
@@ -100,7 +123,7 @@ height:335px;
             <th></th>
             <th>Collaborators</th>
             <th>
-              <input type="text"></input>
+              <input id="collaborators" type="text"></input>
             </th>
           </tr>
           <tr>
@@ -108,7 +131,7 @@ height:335px;
             <th></th>
             <th>Start Date</th>
             <th>
-              <input type="date"></input>
+              <input id="startDate" type="date"></input>
             </th>
           </tr>
           <tr>
@@ -116,7 +139,7 @@ height:335px;
             <th></th>
             <th>End Date</th>
             <th>
-              <input type="date"></input>
+              <input id="endDate" type="date"></input>
             </th>
           </tr>
           <tr>
@@ -124,9 +147,9 @@ height:335px;
             <th></th>
             <th>Priority</th>
             <th>
-              <input type="radio" id="not-priority" name="priority-select"></input>
+              <input id="priority1" type="radio" id="not-priority" name="priority-select"></input>
               <label for="not-priority">Not Priority</label>
-              <input type="radio" id="priority" name="priority-select"></input>
+              <input id="priority2" type="radio" id="priority" name="priority-select"></input>
               <label for="priority">Priority</label>
             </th>
           </tr>
@@ -135,7 +158,7 @@ height:335px;
             <th></th>
             <th>Description</th>
             <th>
-              <input type="text"></input>
+              <input id="description" type="text"></input>
             </th>
           </tr>
           <tr>
@@ -150,18 +173,11 @@ height:335px;
         </table>
         </div>
       </section>
-     <section id="sec2" >
-
-      <p>Project:</p><input type="text" name ="project"><br>
-      <p>Category:</p><input type="text" name ="category"><br>
-      <p>Collaborators:</p><input type="text" name ="collaborators"><br>
-      <p>Start Date:</p><input type="text" name ="start date"><br>
-      <p>End Date:</p><input type="text" name ="end date"><br>
-      <p>Priority:</p><input type="text" name ="priority"><br>
-      <p>Description:</p><input type="text" name ="description"><br>
-      <br>
-      <input type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
-         </section>
+ 
+      <input id="submit" type="submit" value="Submit" class="btn" name="add" onclick="alert('Project created')"></input>
+      <button id="delete" onclick="alert('Project deleted')">Delete</button>
+    
+    </section>
        </form>
 
   <section class="aboutus" id="aboutus"  >
@@ -173,7 +189,7 @@ height:335px;
           <li>Remember deadlines with reminders and due dates.</li>
           <li>Collaborate on projects by assigning tasks to others.</li>
           <li>Prioritize your tasks with priority levels.</li>
-        </ul>    az
+        </ul>    
     </div>  
   </section>
   <section class="facts" id="facts">
